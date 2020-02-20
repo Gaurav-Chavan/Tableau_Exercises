@@ -15,4 +15,7 @@ https://public.tableau.com/profile/gaurav.chavan#!/vizhome/CustomerSegmentationU
 4. Sales Performance | Retail Analytics
 https://public.tableau.com/profile/gaurav.chavan#!/vizhome/SalesPerformance_15819639530760/SalesPerofrmance
 
+5. Lomg Term Unemployment Rate
+https://public.tableau.com/profile/gaurav.chavan#!/vizhome/Long-termunemploymentrate/Sheet2
+
 
