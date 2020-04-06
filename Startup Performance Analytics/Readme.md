@@ -1,5 +1,7 @@
 Inspired form :
 
+Section 2 : https://www.superdatascience.com/pages/tableau-advanced
+
 
 This Wokrbook Package focus on :
 
