@@ -9,4 +9,10 @@ This Wokrbook Package focus on :
 
 2. Revenue vs Expense Quadrant to identify Key Contributors [ScatterPlot| Advanced Filtering | Sets | Parameter Control]
 
+Key Aspects:
 
+- **Sets | Combined Sets**
+
+- **Groups**
+
+- **Parameter Control over Sets**
