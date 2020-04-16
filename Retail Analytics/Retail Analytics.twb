@@ -1,0 +1,2491 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0417.1429                               -->
+<workbook original-version='18.1' source-build='2019.1.3 (20191.19.0417.1429)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='P11-Competitor-Research' inline='true' name='federated.1m0etgl065vbm71bmom4s0vbglnh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='P11-Competitor-Research' name='textscan.01sv6sp0bab6ep1er9uz61tye0mq'>
+            <connection class='textscan' directory='G:/Data Science/MOOC/Tableau/Udemy - Tableau 10 Advanced/04 Advanced Data Prep  Analytics In Tableau' filename='P11-Competitor-Research.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[NSW]' />
+            <value name='[QLD]' />
+            <value name='[VIC]' />
+            <value name='[WA]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[P11-Competitor-Research.csv].[NSW]' />
+              <field name='[P11-Competitor-Research.csv].[QLD]' />
+              <field name='[P11-Competitor-Research.csv].[VIC]' />
+              <field name='[P11-Competitor-Research.csv].[WA]' />
+            </group>
+          </groups>
+          <relation connection='textscan.01sv6sp0bab6ep1er9uz61tye0mq' name='P11-Competitor-Research.csv' table='[P11-Competitor-Research#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Company' ordinal='0' />
+              <column datatype='real' name='QLD' ordinal='1' />
+              <column datatype='real' name='WA' ordinal='2' />
+              <column datatype='real' name='VIC' ordinal='3' />
+              <column datatype='real' name='NSW' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[P11-Competitor-Research.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Company]</local-name>
+            <parent-name>[P11-Competitor-Research.csv]</parent-name>
+            <remote-alias>Company</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Region' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Net Profit Margin' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Data1 (P11-310104-Australian-Demographic-Statistics)' inline='true' name='federated.0uxo5lt03amlxr1a6m52l0lm4be1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='P11-310104-Australian-Demographic-Statistics' name='excel-direct.0806ckj19dy4hi16p92kw03gtpdl'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='G:/Data Science/MOOC/Tableau/Udemy - Tableau 10 Advanced/04 Advanced Data Prep  Analytics In Tableau/P11-310104-Australian-Demographic-Statistics.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Estimated Resident Population ;  Female ;  Australia ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Australian Capital Territory ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  New South Wales ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Northern Territory ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Queensland ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  South Australia ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Tasmania ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Victoria ;]' />
+            <value name='[Estimated Resident Population ;  Female ;  Western Australia ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Australia ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Australian Capital Territory ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  New South Wales ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Northern Territory ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Queensland ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  South Australia ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Tasmania ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Victoria ;]' />
+            <value name='[Estimated Resident Population ;  Male ;  Western Australia ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Australia ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Australian Capital Territory ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  New South Wales ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Northern Territory ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Queensland ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  South Australia ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Tasmania ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Victoria ;]' />
+            <value name='[Estimated Resident Population ;  Persons ;  Western Australia ;]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Australian Capital Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  New South Wales ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Northern Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Queensland ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  South Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Tasmania ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Victoria ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Female ;  Western Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Australian Capital Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  New South Wales ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Northern Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Queensland ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  South Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Tasmania ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Victoria ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Male ;  Western Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Australian Capital Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  New South Wales ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Northern Territory ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Queensland ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  South Australia ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Tasmania ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Victoria ;]' />
+              <field name='[Data1].[Estimated Resident Population ;  Persons ;  Western Australia ;]' />
+            </group>
+          </groups>
+          <relation connection='excel-direct.0806ckj19dy4hi16p92kw03gtpdl' name='Data1' table='[Data1$]' type='table'>
+            <columns gridOrigin='A1:AB137:no:A1:AB137:0' header='yes' outcome='6'>
+              <column datatype='date' name='F1' ordinal='0' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  New South Wales ;' ordinal='1' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Victoria ;' ordinal='2' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Queensland ;' ordinal='3' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  South Australia ;' ordinal='4' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Western Australia ;' ordinal='5' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Tasmania ;' ordinal='6' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Northern Territory ;' ordinal='7' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Australian Capital Territory ;' ordinal='8' />
+              <column datatype='integer' name='Estimated Resident Population ;  Male ;  Australia ;' ordinal='9' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  New South Wales ;' ordinal='10' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Victoria ;' ordinal='11' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Queensland ;' ordinal='12' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  South Australia ;' ordinal='13' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Western Australia ;' ordinal='14' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Tasmania ;' ordinal='15' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Northern Territory ;' ordinal='16' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Australian Capital Territory ;' ordinal='17' />
+              <column datatype='integer' name='Estimated Resident Population ;  Female ;  Australia ;' ordinal='18' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  New South Wales ;' ordinal='19' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Victoria ;' ordinal='20' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Queensland ;' ordinal='21' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  South Australia ;' ordinal='22' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Western Australia ;' ordinal='23' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Tasmania ;' ordinal='24' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Northern Territory ;' ordinal='25' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Australian Capital Territory ;' ordinal='26' />
+              <column datatype='integer' name='Estimated Resident Population ;  Persons ;  Australia ;' ordinal='27' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AB137:no:A1:AB137:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Gender' datatype='string' name='[Pivot Field Names - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( SPLIT( SPLIT( [Pivot Field Names], &quot;Estimated&quot;, 2 ), &quot;Resident&quot;, 2 ), &quot;Population&quot;, 2 ), &quot;;&quot;, 2 ) )' />
+      </column>
+      <column caption='State' datatype='string' name='[Pivot Field Names - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( SPLIT( SPLIT( [Pivot Field Names], &quot;Estimated&quot;, 2 ), &quot;Resident&quot;, 2 ), &quot;Population&quot;, 2 ), &quot;;&quot;, 3 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Population' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.238636' measure-ordering='alphabetic' measure-percentage='0.761364' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <filter class='categorical' column='[Pivot Field Names - Split 1]' filter-group='2'>
+        <groupfilter function='member' level='[Pivot Field Names - Split 1]' member='&quot;Persons&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </datasource>
+    <datasource caption='Data1 (P11-8501011-Retail-Turnover-State-by-Industry-Subgroup)' inline='true' name='federated.12khwf112dgjsn1ekcw3r1iuvepp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='P11-8501011-Retail-Turnover-State-by-Industry-Subgroup' name='excel-direct.0l3uerc0axmon61e5drnp14aso71'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='G:/Data Science/MOOC/Tableau/Udemy - Tableau 10 Advanced/04 Advanced Data Prep  Analytics In Tableau/P11-8501011-Retail-Turnover-State-by-Industry-Subgroup.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='real' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Turnover ;  Australian Capital Territory ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Department stores ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Food retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Other retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Australian Capital Territory ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  New South Wales ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  New South Wales ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  New South Wales ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Department stores ;]' />
+            <value name='[Turnover ;  New South Wales ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Food retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Other retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  New South Wales ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  New South Wales ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  New South Wales ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  New South Wales ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Food retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Northern Territory ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Queensland ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Queensland ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Queensland ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Department stores ;]' />
+            <value name='[Turnover ;  Queensland ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Food retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Other retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  Queensland ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Queensland ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Queensland ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Queensland ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  South Australia ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  South Australia ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  South Australia ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Department stores ;]' />
+            <value name='[Turnover ;  South Australia ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Food retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Other retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  South Australia ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  South Australia ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  South Australia ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  South Australia ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Tasmania ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Tasmania ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Tasmania ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Food retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Tasmania ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Tasmania ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Tasmania ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Total (State) ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Total (State) ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Total (State) ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Department stores ;]' />
+            <value name='[Turnover ;  Total (State) ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Food retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Other retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  Total (State) ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Total (State) ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Total (State) ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Total (State) ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Victoria ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Victoria ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Victoria ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Department stores ;]' />
+            <value name='[Turnover ;  Victoria ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Food retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Other retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  Victoria ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Victoria ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Victoria ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Victoria ;  Total (Industry) ;]' />
+            <value name='[Turnover ;  Western Australia ;  Cafes, restaurants and catering services ;]' />
+            <value name='[Turnover ;  Western Australia ;  Cafes, restaurants and takeaway food services ;]' />
+            <value name='[Turnover ;  Western Australia ;  Clothing retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Clothing, footwear and personal accessory retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Department stores ;]' />
+            <value name='[Turnover ;  Western Australia ;  Electrical and electronic goods retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Food retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Footwear and other personal accessory retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Hardware, building and garden supplies retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Household goods retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Liquor retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Newspaper and book retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Other recreational goods retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Other retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Other retailing n.e.c. ;]' />
+            <value name='[Turnover ;  Western Australia ;  Other specialised food retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+            <value name='[Turnover ;  Western Australia ;  Supermarket and grocery stores ;]' />
+            <value name='[Turnover ;  Western Australia ;  Takeaway food services ;]' />
+            <value name='[Turnover ;  Western Australia ;  Total (Industry) ;]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Australian Capital Territory ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  New South Wales ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Northern Territory ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Queensland ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  South Australia ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Tasmania ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Total (State) ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Victoria ;  Total (Industry) ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Cafes, restaurants and catering services ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Cafes, restaurants and takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Clothing retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Clothing, footwear and personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Department stores ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Electrical and electronic goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Footwear and other personal accessory retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Hardware, building and garden supplies retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Household goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Liquor retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Newspaper and book retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Other recreational goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Other retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Other retailing n.e.c. ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Other specialised food retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Supermarket and grocery stores ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Takeaway food services ;]' />
+              <field name='[Data1].[Turnover ;  Western Australia ;  Total (Industry) ;]' />
+            </group>
+          </groups>
+          <relation connection='excel-direct.0l3uerc0axmon61e5drnp14aso71' name='Data1' table='[Data1$]' type='table'>
+            <columns gridOrigin='A1:GH402:no:A1:GH402:0' header='yes' outcome='6'>
+              <column datatype='date' name='F1' ordinal='0' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Supermarket and grocery stores ;' ordinal='1' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Liquor retailing ;' ordinal='2' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Other specialised food retailing ;' ordinal='3' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Food retailing ;' ordinal='4' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='5' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Electrical and electronic goods retailing ;' ordinal='6' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Hardware, building and garden supplies retailing ;' ordinal='7' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Household goods retailing ;' ordinal='8' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Clothing retailing ;' ordinal='9' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Footwear and other personal accessory retailing ;' ordinal='10' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Clothing, footwear and personal accessory retailing ;' ordinal='11' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Department stores ;' ordinal='12' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Newspaper and book retailing ;' ordinal='13' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Other recreational goods retailing ;' ordinal='14' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='15' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Other retailing n.e.c. ;' ordinal='16' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Other retailing ;' ordinal='17' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Cafes, restaurants and catering services ;' ordinal='18' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Takeaway food services ;' ordinal='19' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Cafes, restaurants and takeaway food services ;' ordinal='20' />
+              <column datatype='real' name='Turnover ;  New South Wales ;  Total (Industry) ;' ordinal='21' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Supermarket and grocery stores ;' ordinal='22' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Liquor retailing ;' ordinal='23' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Other specialised food retailing ;' ordinal='24' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Food retailing ;' ordinal='25' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='26' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Electrical and electronic goods retailing ;' ordinal='27' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Hardware, building and garden supplies retailing ;' ordinal='28' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Household goods retailing ;' ordinal='29' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Clothing retailing ;' ordinal='30' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Footwear and other personal accessory retailing ;' ordinal='31' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Clothing, footwear and personal accessory retailing ;' ordinal='32' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Department stores ;' ordinal='33' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Newspaper and book retailing ;' ordinal='34' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Other recreational goods retailing ;' ordinal='35' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='36' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Other retailing n.e.c. ;' ordinal='37' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Other retailing ;' ordinal='38' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Cafes, restaurants and catering services ;' ordinal='39' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Takeaway food services ;' ordinal='40' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Cafes, restaurants and takeaway food services ;' ordinal='41' />
+              <column datatype='real' name='Turnover ;  Victoria ;  Total (Industry) ;' ordinal='42' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Supermarket and grocery stores ;' ordinal='43' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Liquor retailing ;' ordinal='44' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Other specialised food retailing ;' ordinal='45' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Food retailing ;' ordinal='46' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='47' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Electrical and electronic goods retailing ;' ordinal='48' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Hardware, building and garden supplies retailing ;' ordinal='49' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Household goods retailing ;' ordinal='50' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Clothing retailing ;' ordinal='51' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Footwear and other personal accessory retailing ;' ordinal='52' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Clothing, footwear and personal accessory retailing ;' ordinal='53' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Department stores ;' ordinal='54' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Newspaper and book retailing ;' ordinal='55' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Other recreational goods retailing ;' ordinal='56' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='57' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Other retailing n.e.c. ;' ordinal='58' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Other retailing ;' ordinal='59' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Cafes, restaurants and catering services ;' ordinal='60' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Takeaway food services ;' ordinal='61' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Cafes, restaurants and takeaway food services ;' ordinal='62' />
+              <column datatype='real' name='Turnover ;  Queensland ;  Total (Industry) ;' ordinal='63' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Supermarket and grocery stores ;' ordinal='64' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Liquor retailing ;' ordinal='65' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Other specialised food retailing ;' ordinal='66' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Food retailing ;' ordinal='67' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='68' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Electrical and electronic goods retailing ;' ordinal='69' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Hardware, building and garden supplies retailing ;' ordinal='70' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Household goods retailing ;' ordinal='71' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Clothing retailing ;' ordinal='72' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Footwear and other personal accessory retailing ;' ordinal='73' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Clothing, footwear and personal accessory retailing ;' ordinal='74' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Department stores ;' ordinal='75' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Newspaper and book retailing ;' ordinal='76' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Other recreational goods retailing ;' ordinal='77' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='78' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Other retailing n.e.c. ;' ordinal='79' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Other retailing ;' ordinal='80' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Cafes, restaurants and catering services ;' ordinal='81' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Takeaway food services ;' ordinal='82' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Cafes, restaurants and takeaway food services ;' ordinal='83' />
+              <column datatype='real' name='Turnover ;  South Australia ;  Total (Industry) ;' ordinal='84' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Supermarket and grocery stores ;' ordinal='85' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Liquor retailing ;' ordinal='86' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Other specialised food retailing ;' ordinal='87' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Food retailing ;' ordinal='88' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='89' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Electrical and electronic goods retailing ;' ordinal='90' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Hardware, building and garden supplies retailing ;' ordinal='91' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Household goods retailing ;' ordinal='92' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Clothing retailing ;' ordinal='93' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Footwear and other personal accessory retailing ;' ordinal='94' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Clothing, footwear and personal accessory retailing ;' ordinal='95' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Department stores ;' ordinal='96' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Newspaper and book retailing ;' ordinal='97' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Other recreational goods retailing ;' ordinal='98' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='99' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Other retailing n.e.c. ;' ordinal='100' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Other retailing ;' ordinal='101' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Cafes, restaurants and catering services ;' ordinal='102' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Takeaway food services ;' ordinal='103' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Cafes, restaurants and takeaway food services ;' ordinal='104' />
+              <column datatype='real' name='Turnover ;  Western Australia ;  Total (Industry) ;' ordinal='105' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Supermarket and grocery stores ;' ordinal='106' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Liquor retailing ;' ordinal='107' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Other specialised food retailing ;' ordinal='108' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Food retailing ;' ordinal='109' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='110' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Electrical and electronic goods retailing ;' ordinal='111' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Hardware, building and garden supplies retailing ;' ordinal='112' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Household goods retailing ;' ordinal='113' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Clothing retailing ;' ordinal='114' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Footwear and other personal accessory retailing ;' ordinal='115' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Clothing, footwear and personal accessory retailing ;' ordinal='116' />
+              <column datatype='string' name='Turnover ;  Tasmania ;  Department stores ;' ordinal='117' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Newspaper and book retailing ;' ordinal='118' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Other recreational goods retailing ;' ordinal='119' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='120' />
+              <column datatype='string' name='Turnover ;  Tasmania ;  Other retailing n.e.c. ;' ordinal='121' />
+              <column datatype='string' name='Turnover ;  Tasmania ;  Other retailing ;' ordinal='122' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Cafes, restaurants and catering services ;' ordinal='123' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Takeaway food services ;' ordinal='124' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Cafes, restaurants and takeaway food services ;' ordinal='125' />
+              <column datatype='real' name='Turnover ;  Tasmania ;  Total (Industry) ;' ordinal='126' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Supermarket and grocery stores ;' ordinal='127' />
+              <column datatype='string' name='Turnover ;  Northern Territory ;  Liquor retailing ;' ordinal='128' />
+              <column datatype='string' name='Turnover ;  Northern Territory ;  Other specialised food retailing ;' ordinal='129' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Food retailing ;' ordinal='130' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='131' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Electrical and electronic goods retailing ;' ordinal='132' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Hardware, building and garden supplies retailing ;' ordinal='133' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Household goods retailing ;' ordinal='134' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Clothing retailing ;' ordinal='135' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Footwear and other personal accessory retailing ;' ordinal='136' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Clothing, footwear and personal accessory retailing ;' ordinal='137' />
+              <column datatype='string' name='Turnover ;  Northern Territory ;  Department stores ;' ordinal='138' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Newspaper and book retailing ;' ordinal='139' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Other recreational goods retailing ;' ordinal='140' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='141' />
+              <column datatype='string' name='Turnover ;  Northern Territory ;  Other retailing n.e.c. ;' ordinal='142' />
+              <column datatype='string' name='Turnover ;  Northern Territory ;  Other retailing ;' ordinal='143' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Cafes, restaurants and catering services ;' ordinal='144' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Takeaway food services ;' ordinal='145' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Cafes, restaurants and takeaway food services ;' ordinal='146' />
+              <column datatype='real' name='Turnover ;  Northern Territory ;  Total (Industry) ;' ordinal='147' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Supermarket and grocery stores ;' ordinal='148' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Liquor retailing ;' ordinal='149' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Other specialised food retailing ;' ordinal='150' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Food retailing ;' ordinal='151' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='152' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Electrical and electronic goods retailing ;' ordinal='153' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Hardware, building and garden supplies retailing ;' ordinal='154' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Household goods retailing ;' ordinal='155' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Clothing retailing ;' ordinal='156' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Footwear and other personal accessory retailing ;' ordinal='157' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Clothing, footwear and personal accessory retailing ;' ordinal='158' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Department stores ;' ordinal='159' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Newspaper and book retailing ;' ordinal='160' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Other recreational goods retailing ;' ordinal='161' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='162' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Other retailing n.e.c. ;' ordinal='163' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Other retailing ;' ordinal='164' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Cafes, restaurants and catering services ;' ordinal='165' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Takeaway food services ;' ordinal='166' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Cafes, restaurants and takeaway food services ;' ordinal='167' />
+              <column datatype='real' name='Turnover ;  Australian Capital Territory ;  Total (Industry) ;' ordinal='168' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Supermarket and grocery stores ;' ordinal='169' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Liquor retailing ;' ordinal='170' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Other specialised food retailing ;' ordinal='171' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Food retailing ;' ordinal='172' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Furniture, floor coverings, houseware and textile goods retailing ;' ordinal='173' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Electrical and electronic goods retailing ;' ordinal='174' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Hardware, building and garden supplies retailing ;' ordinal='175' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Household goods retailing ;' ordinal='176' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Clothing retailing ;' ordinal='177' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Footwear and other personal accessory retailing ;' ordinal='178' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Clothing, footwear and personal accessory retailing ;' ordinal='179' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Department stores ;' ordinal='180' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Newspaper and book retailing ;' ordinal='181' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Other recreational goods retailing ;' ordinal='182' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Pharmaceutical, cosmetic and toiletry goods retailing ;' ordinal='183' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Other retailing n.e.c. ;' ordinal='184' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Other retailing ;' ordinal='185' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Cafes, restaurants and catering services ;' ordinal='186' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Takeaway food services ;' ordinal='187' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Cafes, restaurants and takeaway food services ;' ordinal='188' />
+              <column datatype='real' name='Turnover ;  Total (State) ;  Total (Industry) ;' ordinal='189' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Tasmania ;  Department stores ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Tasmania ;  Department stores ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Tasmania ;  Department stores ;</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Tasmania ;  Other retailing n.e.c. ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Tasmania ;  Other retailing n.e.c. ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Tasmania ;  Other retailing n.e.c. ;</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Tasmania ;  Other retailing ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Tasmania ;  Other retailing ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Tasmania ;  Other retailing ;</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Northern Territory ;  Liquor retailing ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Northern Territory ;  Liquor retailing ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Northern Territory ;  Liquor retailing ;</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Northern Territory ;  Other specialised food retailing ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Northern Territory ;  Other specialised food retailing ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Northern Territory ;  Other specialised food retailing ;</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Northern Territory ;  Department stores ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Northern Territory ;  Department stores ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Northern Territory ;  Department stores ;</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Northern Territory ;  Other retailing n.e.c. ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Northern Territory ;  Other retailing n.e.c. ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Northern Territory ;  Other retailing n.e.c. ;</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Turnover ;  Northern Territory ;  Other retailing ;</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Turnover ;  Northern Territory ;  Other retailing ;]</local-name>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias>Turnover ;  Northern Territory ;  Other retailing ;</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:GH402:no:A1:GH402:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Sales Per Capita' datatype='real' name='[Calculation_547468870645620736]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([Pivot Field Values]) /SUM([federated.0uxo5lt03amlxr1a6m52l0lm4be1].[Pivot Field Values]) * 1000000' />
+      </column>
+      <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='State' datatype='string' name='[Pivot Field Names - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Pivot Field Names], &quot;Turnover&quot;, 2 ), &quot;;&quot;, 2 ) )' />
+      </column>
+      <column caption='Industry' datatype='string' name='[Pivot Field Names - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Pivot Field Names], &quot;Turnover&quot;, 2 ), &quot;;&quot;, 3 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Turnover $' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Northern Territory ;  Department stores ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Northern Territory ;  Liquor retailing ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Northern Territory ;  Other retailing ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Northern Territory ;  Other retailing n.e.c. ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Northern Territory ;  Other specialised food retailing ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Tasmania ;  Department stores ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Tasmania ;  Other retailing ;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Turnover ;  Tasmania ;  Other retailing n.e.c. ;]' role='dimension' type='nominal' />
+      <column-instance column='[F1]' derivation='None' name='[none:F1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Pivot Field Names - Split 1]' derivation='None' name='[none:Pivot Field Names - Split 1:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Pivot Field Names - Split 1:nk]' type='palette'>
+            <map to='#1170aa'>
+              <bucket>&quot;Victoria&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Australian Capital Territory&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;South Australia&quot;</bucket>
+            </map>
+            <map to='#a3cce9'>
+              <bucket>&quot;Queensland&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Total (State)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Northern Territory&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Tasmania&quot;</bucket>
+            </map>
+            <map to='#fc7d0b'>
+              <bucket>&quot;New South Wales&quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Western Australia&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Pivot Field Names - Split 1:nk]&#10;[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <multibucket>
+                <bucket>&quot;Victoria&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#4e79a7'>
+              <multibucket>
+                <bucket>&quot;Victoria&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#76b7b2'>
+              <multibucket>
+                <bucket>&quot;Queensland&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#76b7b2'>
+              <multibucket>
+                <bucket>&quot;Queensland&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#c85200'>
+              <multibucket>
+                <bucket>&quot;Western Australia&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#f1ce63'>
+              <multibucket>
+                <bucket>&quot;Western Australia&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#f28e2b'>
+              <multibucket>
+                <bucket>&quot;New South Wales&quot;</bucket>
+                <bucket>&quot;Estimate&quot;</bucket>
+              </multibucket>
+            </map>
+            <map to='#fc7d0b'>
+              <multibucket>
+                <bucket>&quot;New South Wales&quot;</bucket>
+                <bucket>&quot;Actual&quot;</bucket>
+              </multibucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <datasource-dependencies datasource='federated.0uxo5lt03amlxr1a6m52l0lm4be1'>
+        <column caption='Population' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[Pivot Field Names - Split 2]' filter-group='2'>
+        <groupfilter function='member' level='[Pivot Field Names - Split 2]' member='&quot;Clothing retailing&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[none:F1:qk]' filter-group='2' included-values='in-range'>
+        <min>#2000-01-01#</min>
+        <max>#2015-08-01#</max>
+      </filter>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='federated.0uxo5lt03amlxr1a6m52l0lm4be1'>
+      <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+      <column caption='State' datatype='string' name='[Pivot Field Names - Split 2]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( SPLIT( SPLIT( [Pivot Field Names], &quot;Estimated&quot;, 2 ), &quot;Resident&quot;, 2 ), &quot;Population&quot;, 2 ), &quot;;&quot;, 3 ) )' />
+      </column>
+      <column-instance column='[Pivot Field Names - Split 2]' derivation='None' name='[none:Pivot Field Names - Split 2:nk]' pivot='key' type='nominal' />
+      <column-instance column='[F1]' derivation='Quarter' name='[qr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Quarter-Trunc' name='[tqr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Year-Trunc' name='[tyr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Year' name='[yr:F1:ok]' pivot='key' type='ordinal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='federated.12khwf112dgjsn1ekcw3r1iuvepp'>
+      <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+      <column caption='State' datatype='string' name='[Pivot Field Names - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[Pivot Field Names]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Pivot Field Names], &quot;Turnover&quot;, 2 ), &quot;;&quot;, 2 ) )' />
+      </column>
+      <column-instance column='[Pivot Field Names - Split 1]' derivation='None' name='[none:Pivot Field Names - Split 1:nk]' pivot='key' type='nominal' />
+      <column-instance column='[F1]' derivation='Quarter' name='[qr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Quarter-Trunc' name='[tqr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Year-Trunc' name='[tyr:F1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[F1]' derivation='Year' name='[yr:F1:ok]' pivot='key' type='ordinal' />
+    </datasource-dependencies>
+    <datasource-relationship source='federated.12khwf112dgjsn1ekcw3r1iuvepp' target='federated.0uxo5lt03amlxr1a6m52l0lm4be1'>
+      <column-mapping>
+        <map key='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]' value='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[none:Pivot Field Names - Split 2:nk]' />
+        <map key='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[qr:F1:ok]' value='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[qr:F1:ok]' />
+        <map key='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tqr:F1:ok]' value='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[tqr:F1:ok]' />
+        <map key='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tyr:F1:ok]' value='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[tyr:F1:ok]' />
+        <map key='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[yr:F1:ok]' value='[federated.0uxo5lt03amlxr1a6m52l0lm4be1].[yr:F1:ok]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Industry  Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Clothing &lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data1 (P11-8501011-Retail-Turnover-State-by-Industry-Subgroup)' name='federated.12khwf112dgjsn1ekcw3r1iuvepp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.12khwf112dgjsn1ekcw3r1iuvepp'>
+            <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[Pivot Field Names - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[Pivot Field Names]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Pivot Field Names], &quot;Turnover&quot;, 2 ), &quot;;&quot;, 2 ) )' />
+            </column>
+            <column datatype='string' hidden='true' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Turnover $' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Pivot Field Names - Split 1]' derivation='None' name='[none:Pivot Field Names - Split 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F1]' derivation='Month-Trunc' name='[tmn:F1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;New South Wales&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Queensland&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Victoria&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Western Australia&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[sum:Pivot Field Values:qk]' field-type='quantitative' range-type='independent' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tmn:F1:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>([federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk] * [federated.12khwf112dgjsn1ekcw3r1iuvepp].[sum:Pivot Field Values:qk])</rows>
+        <cols>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tmn:F1:qk]</cols>
+      </table>
+      <simple-id uuid='{2CE9D400-56B1-4DF3-B070-C2F7EFD8826E}' />
+    </worksheet>
+    <worksheet name='Profit Analysis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P11-Competitor-Research' name='federated.1m0etgl065vbm71bmom4s0vbglnh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m0etgl065vbm71bmom4s0vbglnh'>
+            <column caption='Region' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Net Profit Margin' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1m0etgl065vbm71bmom4s0vbglnh].[none:Pivot Field Names:nk]' value='127' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]' value='p0.00%' />
+            <format attr='font-weight' field='[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]' value='bold' />
+            <format attr='font-size' field='[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]' value='10' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1m0etgl065vbm71bmom4s0vbglnh].[none:Pivot Field Names:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='none' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.11994475126266479' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m0etgl065vbm71bmom4s0vbglnh].[sum:Pivot Field Values:qk]</rows>
+        <cols>[federated.1m0etgl065vbm71bmom4s0vbglnh].[none:Pivot Field Names:nk]</cols>
+      </table>
+      <simple-id uuid='{525DBAE3-16B1-45D9-87D3-432FC3DB474C}' />
+    </worksheet>
+    <worksheet name='Sales Per Capita'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Clothing &lt;Sheet Name&gt; (With Forecasts)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data1 (P11-8501011-Retail-Turnover-State-by-Industry-Subgroup)' name='federated.12khwf112dgjsn1ekcw3r1iuvepp' />
+            <datasource caption='Data1 (P11-310104-Australian-Demographic-Statistics)' name='federated.0uxo5lt03amlxr1a6m52l0lm4be1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uxo5lt03amlxr1a6m52l0lm4be1'>
+            <column caption='Population' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.12khwf112dgjsn1ekcw3r1iuvepp'>
+            <column caption='Sales Per Capita' datatype='real' name='[Calculation_547468870645620736]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([Pivot Field Values]) /SUM([federated.0uxo5lt03amlxr1a6m52l0lm4be1].[Pivot Field Values]) * 1000000' />
+            </column>
+            <column caption='Date' datatype='date' name='[F1]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[Pivot Field Names - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[Pivot Field Names]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Pivot Field Names], &quot;Turnover&quot;, 2 ), &quot;;&quot;, 2 ) )' />
+            </column>
+            <column datatype='string' hidden='true' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Turnover $' datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_547468870645620736]' derivation='User' forecast-column-base='[usr:Calculation_547468870645620736:qk]' forecast-column-type='forecast-value' name='[fVal:usr:Calculation_547468870645620736:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Names - Split 1]' derivation='None' name='[none:Pivot Field Names - Split 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F1]' derivation='Month-Trunc' name='[tmn:F1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_547468870645620736]' derivation='User' name='[usr:Calculation_547468870645620736:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;New South Wales&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Queensland&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Victoria&quot;' />
+              <groupfilter function='member' level='[none:Pivot Field Names - Split 1:nk]' member='&quot;Western Australia&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tmn:F1:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]' />
+              <color column='[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>([federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk] * [federated.12khwf112dgjsn1ekcw3r1iuvepp].[fVal:usr:Calculation_547468870645620736:qk])</rows>
+        <cols>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tmn:F1:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-periods='Year-Trunc' range-size='5' range-type='next' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{B95DD61B-4EBE-456D-AFD0-E64B20E12383}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Industrial Expansion Overview</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='1' param='vert' removable='false' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='4125' id='3' type='title' w='98400' x='800' y='1000' />
+            <zone h='12625' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98400' x='800' y='5125' />
+            <zone h='81250' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98400' x='800' y='17750'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Profit Analysis' captured-sheet='Profit Analysis' id='1' />
+                  <story-point caption='Industrial Analysis' captured-sheet='Industry  Analysis' id='2'>
+                    <capturedDeltas>
+                      <worksheet name='Industry  Analysis'>
+                        <selection-collection />
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Sales Per Capita' captured-sheet='Sales Per Capita' id='3' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{FD3C6900-C6F6-49BA-9237-1D17C9AC90DC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='72'>
+    <window class='worksheet' name='Profit Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m0etgl065vbm71bmom4s0vbglnh].[none:Pivot Field Names:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7CFDBE6C-F874-4EA4-B6E1-5B85AA992F79}' />
+    </window>
+    <window class='worksheet' name='Industry  Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='horizontal'>
+              <node-reference>
+                <axis>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[tmn:F1:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]</field>
+            <field>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[yr:F1:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FAD82CE7-83B6-48E3-B618-4A49D161C8CD}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sales Per Capita'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Forecast Indicator:nk]</field>
+            <field>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[none:Pivot Field Names - Split 1:nk]</field>
+            <field>[federated.12khwf112dgjsn1ekcw3r1iuvepp].[yr:F1:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1858F535-E4F3-42F5-AED9-FB37FEF5998C}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{5CE86CCE-945C-40AA-A116-B9A2108F7602}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Industry  Analysis' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Profit Analysis' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sales Per Capita' width='192'>
+      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
+      6nGu+RNhcNGp3Pkf4AAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
