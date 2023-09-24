@@ -8,3 +8,7 @@ Measures --> Numeric Variables
 2. Live vs Extract(Snpashot) : Live and Extract both have `Refresh data` options
 
 3. 'Field Sorting` Basis Name (A-Z/Z-A) is possible in Data Source Tab
+
+4. Hierarchy --> 
+Grouping Categories together
+Date Hierarchy can be customized to be discrete or continuous.
