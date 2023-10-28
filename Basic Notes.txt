@@ -21,3 +21,6 @@ Parameters can also be used with tableau sets.
 Data Blending in Tableau is an approach to combine data from multiple varieties of sources and 
 display them as a whole on one single screen. Create Explicit relationships in the form of Primary and
 Secondary Tables
+
+7. Dependant Filters is possible. 
+Example, Filter updating Subcategories basis Category selected.
