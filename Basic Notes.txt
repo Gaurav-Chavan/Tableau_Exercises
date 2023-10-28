@@ -12,3 +12,8 @@ Measures --> Numeric Variables
 4. Hierarchy --> 
 Grouping Categories together
 Date Hierarchy can be customized to be discrete or continuous.
+
+5. Parameters
+Parameters help user to choose dynamicall Top N values just like slider.
+Parameters can also be used with tableau sets.
+
