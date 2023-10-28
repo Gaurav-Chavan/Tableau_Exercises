@@ -17,3 +17,7 @@ Date Hierarchy can be customized to be discrete or continuous.
 Parameters help user to choose dynamicall Top N values just like slider.
 Parameters can also be used with tableau sets.
 
+6. Data Blending
+Data Blending in Tableau is an approach to combine data from multiple varieties of sources and 
+display them as a whole on one single screen. Create Explicit relationships in the form of Primary and
+Secondary Tables
