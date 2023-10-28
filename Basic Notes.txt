@@ -24,3 +24,7 @@ Secondary Tables
 
 7. Dependant Filters is possible. 
 Example, Filter updating Subcategories basis Category selected.
+
+8. Data can be filtered from source itself.
+
+
