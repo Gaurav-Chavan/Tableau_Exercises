@@ -27,4 +27,4 @@ Example, Filter updating Subcategories basis Category selected.
 
 8. Data can be filtered from source itself.
 
-
+9. To remove aggreation, uncheck Aggregate Measures in Analysis Menu
