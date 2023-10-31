@@ -28,3 +28,12 @@ Example, Filter updating Subcategories basis Category selected.
 8. Data can be filtered from source itself.
 
 9. To remove aggreation, uncheck Aggregate Measures in Analysis Menu
+
+10. Table Calculation: Calculation based on Visual ( Running Total, Percent of Total) 
+    "Compute Using" is a feature to break the grand totals basis row/column/table feature wise.
+
+11. Conditional Formatting can be achieved with the help of 'index' and 'last' function.
+    Example, highlight Top N and Bottom N
+
+12. Rank Funcn -- Skips level when Duplicate, Rank_Dense --- Keep levels intact.
+    
